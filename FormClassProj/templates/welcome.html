@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel='stylesheet' href="{% static "/boot.css" %}">
+    <link rel='stylesheet' href="{% static "/demoform.css" %}">
+  </head>
+  <body>
+    <h1>StudentRegistration-ModelForm</h1>
+    <div class="container" align="center">
+      <form  method="post">
+      {{form.as_p }} <!-- add 'as_p' pargraph bwtween field to make form field Vertical-->
+     {% csrf_token %}<!--django will add one hidden form field csrf with random value fo r security -->
+      <input type="submit" name="" class="btn btn-primary" value="Register">
+      </form>
+
+    </div>
+
+  </body>
+</html>
